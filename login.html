@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <title>Questionnaire</title>
+</head>
+
+<body>
+  <header>
+    <h1>Health Questionnaire - Questions</h1>
+  </header>
+
+  <h2 class = "Registration">Please enter the following information to retrieve your UserID:</h2>
+
+  <div id="registrationForm" class="Registration">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthdate:</label>
+      <input type="date" id="birthday" name="birthday" required>
+    </div>
+    <div class="form-group">
+      <label for="Caseworker">CHW Caseworker:</label>
+      <select name="Caseworker" id="caseworkerSelect" required></select>
+    </div>
+    <div class="form-group">
+      <label for="CHW">Community:</label>
+      <select name="Community" id="communitySelect" required></select>
+    </div>
+  </div>
+  
+
+  <button onclick="searchAndDisplay()" id="submitRegistration">Search and Display</button>
+
+  <!-- Section to display UserID information -->
+  <div id="userDetails" class="Registration" style="margin-top: 20px;">
+    <h2>User Details:</h2>
+    <p id="userFirstName"></p>
+    <p id="userLastName"></p>
+    <p id="userBirthdate"></p>
+    <p id="userUserID"></p>
+  </div>
+
+  <button onclick="submitLogin()" id="submitStarters">Submit</button>
+
+  <footer>
+    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+  </footer>
+
+  <script src="common.js"></script>
+  <script>
+    function submitLogin(){
+      window.location.href = 'Starters.html';
+    }
+
+    let userData; // Declare userData outside the complete callback
+
+    // Use PapaParse to parse the second CSV file (UserID.csv)
+    Papa.parse('UserID.csv', {
+      download: true,
+      header: true,
+      complete: function (result) {
+        // Save the parsed data to the userData variable
+        userData = result.data;
+      }
+    });
+
+    // Use PapaParse to parse the CSV file
+    Papa.parse('IDDoc.csv', {
+      download: true,
+      header: true,
+      complete: function (result) {
+        const caseworkerSelect = document.getElementById('caseworkerSelect');
+        const communitySelect = document.getElementById('communitySelect');
+
+        // Populate Caseworker dropdown
+        result.data.forEach((row) => {
+          const option = document.createElement('option');
+          option.value = row.CaseWorkerID; // Use CaseWorker ID as the value
+          option.text = row.Caseworker;
+          caseworkerSelect.appendChild(option);
+        });
+
+        // Populate Community dropdown
+        result.data.forEach((row) => {
+          const option = document.createElement('option');
+          option.value = row.CommunityID; // Use Community ID as the value
+          option.text = row.Community;
+          communitySelect.appendChild(option);
+        });
+      }
+    });
+
+    function generateNewUserID() {
+      // Find the maximum UserID in the existing data
+      const maxUserID = userData.reduce((max, row) => {
+        const userID = parseInt(row.UserID);
+        return userID > max ? userID : max;
+      }, 0);
+
+      // Increment the maximum UserID by one to generate a new UserID
+      const newUserID = maxUserID + 1;
+
+      return newUserID.toString().padStart(3, '0');
+    }
+
+    function searchAndDisplay() {
+      // Retrieve values for search
+      const searchFirstName = document.getElementById('firstName').value;
+      const searchLastName = document.getElementById('lastName').value;
+      const searchBirthdateInput = document.getElementById('birthday').value;
+
+      // Create a new date object using the input date values
+      const dateComponents = searchBirthdateInput.split('-');
+      const searchBirthdate = new Date(
+        parseInt(dateComponents[0]),  // Year
+        parseInt(dateComponents[1]) - 1,  // Month (subtract 1 as months are zero-based)
+        parseInt(dateComponents[2])  // Day
+      );
+
+      // Format the date with leading zeros removed
+      const formattedBirthdate = `${searchBirthdate.getMonth() + 1}/${searchBirthdate.getDate()}/${searchBirthdate.getFullYear()}`;
+
+      console.log('Search Parameters:', searchFirstName, searchLastName, formattedBirthdate);
+
+      // Find the user in the parsed data
+      let user = userData.find((row) => (
+        row.FirstName === searchFirstName &&
+        row.LastName === searchLastName &&
+        row.Birthdate === formattedBirthdate
+      ));
+
+      console.log('User:', user);
+
+      // Display user details
+      if (user) {
+        document.getElementById('userFirstName').textContent = `First Name: ${user.FirstName}`;
+        document.getElementById('userLastName').textContent = `Last Name: ${user.LastName}`;
+        document.getElementById('userBirthdate').textContent = `Birthdate: ${formattedBirthdate}`;
+        document.getElementById('userUserID').textContent = `User ID: ${user.UserID}`;
+
+        // Save the user's ID to sessionStorage
+        sessionStorage.setItem('userFirstName', user.FirstName);
+        sessionStorage.setItem('userLastName', user.LastName);
+        sessionStorage.setItem('userUserID', user.UserID);
+        sessionStorage.setItem('userBirthdate', formattedBirthdate);
+
+        // Log the selected IDs for debugging
+        const selectedCaseworkerID = document.getElementById('caseworkerSelect').value;
+        const selectedCommunityID = document.getElementById('communitySelect').value;
+
+        console.log('Selected Caseworker ID:', selectedCaseworkerID);
+        console.log('Selected Community ID:', selectedCommunityID);
+
+        // Save the IDs to sessionStorage with leading zeros
+        sessionStorage.setItem('selectedCaseworkerID', selectedCaseworkerID.padStart(3, '0'));
+        sessionStorage.setItem('selectedCommunityID', selectedCommunityID.padStart(3, '0'));
+
+        // Redirect to Starters.html
+        //window.location.href = 'Starters.html';
+      } else {
+        // If user not found, generate a new UserID
+        const newUserID = generateNewUserID();
+
+        // Display new user details
+        document.getElementById('userFirstName').textContent = `First Name: ${searchFirstName}`;
+        document.getElementById('userLastName').textContent = `Last Name: ${searchLastName}`;
+        document.getElementById('userBirthdate').textContent = `Birthdate: ${formattedBirthdate}`;
+        document.getElementById('userUserID').textContent = `User ID: ${newUserID}`;
+
+        // Save the new user's ID to sessionStorage
+        sessionStorage.setItem('userBirthdate', formattedBirthdate);
+        sessionStorage.setItem('userFirstName', searchFirstName);
+        sessionStorage.setItem('userLastName', searchLastName);
+        sessionStorage.setItem('userUserID', newUserID);
+
+        // Save the new user's ID to CSV (optional, depends on your requirements)
+
+        const newRow = {
+          FirstName: searchFirstName,
+          LastName: searchLastName,
+          Birthdate: formattedBirthdate,
+          UserID: newUserID
+        };
+
+        userData.push(newRow);
+
+        // Log the selected IDs for debugging
+        const selectedCaseworkerID = document.getElementById('caseworkerSelect').value;
+        const selectedCommunityID = document.getElementById('communitySelect').value;
+
+        console.log('Selected Caseworker ID:', selectedCaseworkerID);
+        console.log('Selected Community ID:', selectedCommunityID);
+
+        // Save the IDs to sessionStorage with leading zeros
+        sessionStorage.setItem('selectedCaseworkerID', selectedCaseworkerID.padStart(3, '0'));
+        sessionStorage.setItem('selectedCommunityID', selectedCommunityID.padStart(3, '0'));
+
+        // Redirect to Starters.html
+        //window.location.href = 'Starters.html';
+      }
+    }
+  </script>
+</body>
+
+</html>

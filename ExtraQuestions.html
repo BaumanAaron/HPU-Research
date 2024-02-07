@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <title>Questionnaire</title>
+</head>
+
+<body>
+  <header>
+    <h1>Health Questionnaire - Additional Questions</h1>
+  </header>
+    <div id="question-11" class="extraquestion">
+        <h3>How many people (including yourself) live in your household?</h3>
+        <label><input type="radio" name="q11" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(11, 'How many people (including yourself) live in your household?', 'Yes', 'Greater than or equal to 6', '6 or more people in household');">Greater than or equal
+            to 6</label>
+        <div></div>
+        <label><input type="radio" name="q11" value="No"
+                onclick="saveAnswerAndShowNextQuestion(11, 'How many people (including yourself) live in your household?', 'No', 'Less than 6', 'Less than 6 people in household')">Less than
+            6</label>
+    </div>
+
+    <div id="question-12" class="extraquestion">
+        <h3>Do you trust information about health or medical topics from a
+            doctor or nurse?</h3>
+        <label><input type="radio" name="q12" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(12, 'Do you trust information about health or medical topics from a doctor or nurse?', 'Yes', 'Touch Required', 'Does not trust information about health or medical topics from a doctor or nurse at all');">Not at all</label>
+        <div></div>
+        <label><input type="radio" name="q12" value="Yes" onclick="saveAnswerAndShowNextQuestion(12, 'Do you trust information about health or medical topics from a doctor or nurse?', 'No', 'Trusts information about health or medical topics from a doctor or nurse a little');">A
+            little</label>
+        <div></div>
+        <label><input type="radio" name="q12" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(12, 'Do you trust information about health or medical topics from a doctor or nurse?', 'No', 'Trusts some information about health or medical topics from a doctor or nurse');">Some</label>
+        <div></div>
+        <label><input type="radio" name="q12" value="No" onclick="saveAnswerAndShowNextQuestion(12, 'Do you trust information about health or medical topics from a doctor or nurse?', 'No', 'Trusts information about health or medical topics from a doctor or nurse a lot')">A lot</label>
+    </div>
+
+
+
+    <div id="question-14" class="extraquestion">
+        <h3>Has a family member ever been diagnosed with depression?</h3>
+        <label><input type="checkbox" name="q14" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with depression');">Paternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q14" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with depression');">Maternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q14" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'Yes', 'Parents', 'A Parent(s) diagnosed with depression');">Parents</label>
+        <div></div>
+        <label><input type="checkbox" name="q14" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with depression');">Sibling</label>
+        <div></div>
+        <label><input type="checkbox" name="q14" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'Yes', 'Spouse', 'A Spouse diagnosed with depression');">Spouse</label>
+        <div></div>
+        <label><input type="checkbox" name="q14" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'Yes', 'Children', 'A Child(ren) diagnosed with depression');">Children</label>
+        <div></div>
+        <label><input type="checkbox" name="q14" value="No" onclick="saveAnswerAndShowNextQuestion(14, 'Has a family member ever been diagnosed with depression?', 'No', 'No family member diagnosed with depression')">No</label>
+    </div>
+
+    <div id="question-15" class="extraquestion">
+        <h3>Has a family member ever been diagnosed with a heart attack?</h3>
+        <label><input type="checkbox" name="q15" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with a heart attack');">Paternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q15" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with a heart attack');">Maternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q15" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'Yes', 'Parents', 'A Parent(s) diagnosed with a heart attack');">Parents</label>
+        <div></div>
+        <label><input type="checkbox" name="q15" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with a heart attack');">Sibling</label>
+        <div></div>
+        <label><input type="checkbox" name="q15" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'Yes', 'Spouse', 'A Spouse diagnosed with a heart attack');">Spouse</label>
+        <div></div>
+        <label><input type="checkbox" name="q15" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'Yes', 'Children', 'A Child(ren) diagnosed with depression');">Children</label>
+        <div></div>
+        <label><input type="checkbox" name="q15" value="No" onclick="saveAnswerAndShowNextQuestion(15, 'Has a family member ever been diagnosed with a heart attack?', 'No', 'No family member diagnosed with a heart attack')">No</label>
+    </div>
+
+
+
+
+
+    <div id="question-18" class="extraquestion">
+        <h3>Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?</h3>
+        <label><input type="checkbox" name="q18" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with prediabetes or borderline diabetes');">Paternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q18" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with prediabetes or borderline diabetes');">Maternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q18" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'Yes', 'Parents', 'A Parent(s) diagnosed with prediabetes or borderline diabetes');">Parents</label>
+        <div></div>
+        <label><input type="checkbox" name="q18" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with prediabetes or borderline diabetes');">Sibling</label>
+        <div></div>
+        <label><input type="checkbox" name="q18" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'Yes', 'Spouse', 'A Spouse diagnosed with prediabetes or borderline diabetes');">Spouse</label>
+        <div></div>
+        <label><input type="checkbox" name="q18" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'Yes', 'Children', 'A Child(ren) diagnosed with prediabetes or borderline diabetes');">Children</label>
+        <div></div>
+        <label><input type="checkbox" name="q18" value="No"
+                onclick="saveAnswerAndShowNextQuestion(18, 'Has a family member ever been diagnosed with pre-diabetes or borderline diabetes?', 'No', 'No', 'No family member diagnosed with prediabetes or borderline diabetes')">No</label>
+    </div>
+
+    <div id="question-19" class="extraquestion">
+        <h3>Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?</h3>
+        <label><input type="checkbox" name="q19" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with PTSD or other Anxiety Disorder');">Paternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q19" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with PTSD or other Anxiety Disorder');">Maternal
+            Grandparents</label>
+        <div></div>
+        <label><input type="checkbox" name="q19" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'Yes', 'Parents', 'A Parent(s) diagnosed with PTSD or other Anxiety Disorder');">Parents</label>
+        <div></div>
+        <label><input type="checkbox" name="q19" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with PTSD or other Anxiety Disorder');">Sibling</label>
+        <div></div>
+        <label><input type="checkbox" name="q19" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'Yes', 'Spouse', 'A Spouse diagnosed with PTSD or other Anxiety Disorder');">Spouse</label>
+        <div></div>
+        <label><input type="checkbox" name="q19" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'Yes', 'Children', 'A Child(ren) diagnosed with PTSD or other Anxiety Disorder');">Children</label>
+        <div></div>
+        <label><input type="checkbox" name="q19" value="No"
+                onclick="saveAnswerAndShowNextQuestion(19, 'Has a family member ever been diagnosed with PTSD or other Anxiety Disorder?', 'No', 'No', 'No family member diagnosed with PTSD or other Anxiety Disorder')">No</label>
+    </div>
+
+    <div id="question-21" class="extraquestion">
+        <h3>During the past 4 weeks were you limited in the kind of work or other activities as a result of your
+            physical health?</h3>
+        <label><input type="radio" name="q21" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(21, 'During the past 4 weeks were you limited in the kind of work or other activities as a result of your physical health?', 'Yes', 'Yes', 'Limited in the kind of work or other activities as a result of their physical health');">Yes</label>
+        <div></div>
+        <label><input type="radio" name="q21" value="No"
+                onclick="saveAnswerAndShowNextQuestion(21, 'During the past 4 weeks were you limited in the kind of work or other activities as a result of your physical health?', 'No', 'No', 'Not limited in the kind of work or other activities as a result of their physical health')">No</label>
+    </div>
+
+    <div id="question-22" class="extraquestion">
+        <h3>During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?</h3>
+        <label><input type="radio" name="q22" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(22, 'During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?', 'No', 'Not at all', 'Pain did not interfere with their normal work (including both work outside the home and housework) at all');">Not at all</label>
+        <div></div>
+        <label><input type="radio" name="q22" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(22, 'During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?', 'No', 'A little bit', 'Pain interfered with their normal work (including both work outside the home and housework) a little bit');">A little bit</label>
+        <div></div>
+        <label><input type="radio" name="q22" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(22, 'During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?', 'No', 'Moderately', 'Pain moderately interfered with their normal work (including both work outside the home and housework)');">Moderately</label>
+        <div></div>
+        <label><input type="radio" name="q22" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(22, 'During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?', 'Yes', 'Quite a bit', 'Pain interfered with their normal work (including both work outside the home and housework) quite a bit');">Quite a bit</label>
+        <div></div>
+        <label><input type="radio" name="q22" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(22, 'During the past 4 weeks, how much did pain interfere with your normal work (including both work outside the home and housework)?', 'Yes', 'Extremely', 'Pain extremely interfered with their normal work (including both work outside the home and housework)');">Extremely</label>
+    </div>
+
+    <div id="question-23" class="extraquestion">
+        <h3>During the past week, how often have you not felt like eating; or your appetite was poor?</h3>
+        <label><input type="radio" name="q23" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(23, 'During the past week, how often have you not felt like eating; or your appetite was poor?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely did not feel like eating or had a poor appetite');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q23" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(23, 'During the past week, how often have you not felt like eating; or your appetite was poor?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week the did not feel like eating or had a poor appetite some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q23" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(23, 'During the past week, how often have you not felt like eating; or your appetite was poor?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally did not feel like eating or had a poor appetite');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q23" value="No"
+                onclick="saveAnswerAndShowNextQuestion(23, 'During the past week, how often have you not felt like eating; or your appetite was poor?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they did not feel like eating or had a poor appetite most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-24" class="extraquestion">
+        <h3>During the past week, how often have you felt depressed?</h3>
+        <label><input type="radio" name="q24" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(24, 'During the past week, how often have you felt depressed?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt depressed');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q24" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(24, 'During the past week, how often have you felt depressed?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week they felt depressed some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q24" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(24, 'During the past week, how often have you felt depressed?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt depressed');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q24" value="No"
+                onclick="saveAnswerAndShowNextQuestion(24, 'During the past week, how often have you felt depressed?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt depressed most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-25" class="extraquestion">
+        <h3>During the past week, how often have you felt that everything you did was an effort?</h3>
+        <label><input type="radio" name="q25" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(25, 'During the past week, how often have you felt that everything you did was an effort?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt that everything they did was an effort');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q25" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(25, 'During the past week, how often have you felt that everything you did was an effort?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week theyfelt that everything they did was an effort some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q25" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(25, 'During the past week, how often have you felt that everything you did was an effort?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt that everything they did was an effort');">Occasionally (3-4
+            days)</label>
+        <div></div>
+        <label><input type="radio" name="q25" value="No"
+                onclick="saveAnswerAndShowNextQuestion(25, 'During the past week, how often have you felt that everything you did was an effort?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt that everything they did was an effort most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-26" class="extraquestion">
+        <h3>During the past week, how often have you felt that your sleep was restless?</h3>
+        <label><input type="radio" name="q26" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(26, 'During the past week, how often have you felt that your sleep was restless?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt that their sleep was restless');">Rarely (less than 1
+            day)</label>
+        <div></div>
+        <label><input type="radio" name="q26" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(26, 'During the past week, how often have you felt that your sleep was restless?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week they felt that their sleep was restless some fo the time');">Some
+            of the time (1-2
+            days)</label>
+        <div></div>
+        <label><input type="radio" name="q26" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(26, 'During the past week, how often have you felt that your sleep was restless?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt that their sleep was restless');">Occasionally (3-4
+            days)</label>
+        <div></div>
+        <label><input type="radio" name="q26" value="No"
+                onclick="saveAnswerAndShowNextQuestion(26, 'During the past week, how often have you felt that your sleep was restless?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt that their sleep was restless most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-27" class="extraquestion">
+        <h3>During the past week, how often have you felt lonely?</h3>
+        <label><input type="radio" name="q27" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(27, 'During the past week, how often have you felt lonely?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt lonely');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q27" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(27, 'During the past week, how often have you felt lonely?', 'No', 'Some of the time', 'During the past week they felt lonely some of the time');">Some of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q27" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(27, 'During the past week, how often have you felt lonely?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt lonely');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q27" value="No"
+                onclick="saveAnswerAndShowNextQuestion(27, 'During the past week, how often have you felt lonely?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt lonely most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-28" class="extraquestion">
+        <h3>During the past week, how often have you felt that people were unfriendly?</h3>
+        <label><input type="radio" name="q28" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(28, 'During the past week, how often have you felt that people were unfriendly?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt that people were unfriendly');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q28" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(28, 'During the past week, how often have you felt that people were unfriendly?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week they felt that people were unfriendly some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q28" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(28, 'During the past week, how often have you felt that people were unfriendly?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt that people were unfriendly');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q28" value="No"
+                onclick="saveAnswerAndShowNextQuestion(28, 'During the past week, how often have you felt that people were unfriendly?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt that people were unfriendly most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+
+
+    <div id="question-30" class="extraquestion">
+        <h3>During the past week, how often have you felt sad?</h3>
+        <label><input type="radio" name="q30" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(30, 'During the past week, how often have you felt sad?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt sad');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q30" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(30, 'During the past week, how often have you felt sad?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week they felt sad some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q30" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(30, 'During the past week, how often have you felt sad?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt sad');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q30" value="No"
+                onclick="saveAnswerAndShowNextQuestion(30, 'During the past week, how often have you felt sad?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt sad most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-31" class="extraquestion">
+        <h3>During the past week, how often have you felt that people disliked you?</h3>
+        <label><input type="radio" name="q31" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(31, 'During the past week, how often have you felt that people disliked you?',  'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt that people disliked them');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q31" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(31, 'During the past week, how often have you felt that people disliked you?',  'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week they felt that people disliked them some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q31" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(31, 'During the past week, how often have you felt that people disliked you?',  'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt that people disliked them');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q31" value="No"
+                onclick="saveAnswerAndShowNextQuestion(31, 'During the past week, how often have you felt that people disliked you?',  'Yes', 'Most of the time (5-7 days)', 'During the past week they felt that people disliked them most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-32" class="extraquestion">
+        <h3>During the past week, how often have you felt you could not get going?</h3>
+        <label><input type="radio" name="q32" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(32, 'During the past week, how often have you felt you could not get going?', 'No', 'Rarely (less than 1 day)', 'During the past week they rarely felt they could not get going');">Rarely
+            (less
+            than 1 day)</label>
+        <div></div>
+        <label><input type="radio" name="q32" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(32, 'During the past week, how often have you felt you could not get going?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'During the past week they felt they could not get going some of the time');">Some
+            of the
+            time (1-2 days)</label>
+        <div></div>
+        <label><input type="radio" name="q32" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(32, 'During the past week, how often have you felt you could not get going?', 'No', 'Occasionally (3-4 days)', 'During the past week they occasionally felt they could not get going');">Occasionally
+            (3-4 days)</label>
+        <div></div>
+        <label><input type="radio" name="q32" value="No"
+                onclick="saveAnswerAndShowNextQuestion(32, 'During the past week, how often have you felt you could not get going?', 'Yes', 'Most of the time (5-7 days)', 'During the past week they felt they could not get going most of the time')">Most of the time (5-7
+            days)</label>
+    </div>
+
+    <div id="question-33" class="extraquestion">
+        <h3>For the past month, about how often have you taken part in
+            moderate physical activity?</h3>
+        <h3>(By moderate activity, we mean exercise or any activity where
+            you're working hard enough to raise your heart rate and break
+            into a sweat).</h3>
+        <label><input type="radio" name="q33" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(33, 'For the past month, about how often have you taken part in moderate physical activity?', 'No', 'More than 4 times a week', 'For the past month, they have taken part in moderate physical activity more than 4 times a week');">More than 4
+            times a week</label>
+        <div></div>
+        <label><input type="radio" name="q33" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(33, 'For the past month, about how often have you taken part in moderate physical activity?', 'No', '2-4 times a week', 'For the past month, they have taken part in moderate physical activity 2-4 times a week');">2-4 times a
+            week</label>
+        <div></div>
+        <label><input type="radio" name="q33" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(33, 'For the past month, about how often have you taken part in moderate physical activity?', 'Yes', 'About once a week', 'For the past month, they have taken part in moderate physical activity about once a week');">About once a week</label>
+        <div></div>
+        <label><input type="radio" name="q33" value="No"
+                onclick="saveAnswerAndShowNextQuestion(33, 'For the past month, about how often have you taken part in moderate physical activity?', 'Yes', 'Rarely or never', 'For the past month, they have rarely or never taken part in moderate physical activity')">Rarely or never</label>
+    </div>
+
+    <div id="question-34" class="extraquestion">
+        <h3>How often do you now smoke cigarettes?</h3>
+        <label><input type="radio" name="q34" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(34, 'How often do you now smoke cigarettes?', 'Yes', 'Everyday', 'They smoke cigarettes everyday');">Everyday</label>
+        <div></div>
+        <label><input type="radio" name="q34" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(34, 'How often do you now smoke cigarettes?', 'Yes', 'Some days', 'They smoke cigarettes some days');">Some
+            days</label>
+        <div></div>
+        <label><input type="radio" name="q34" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(34, 'How often do you now smoke cigarettes?', 'No', 'Not at all', 'They do not smoke cigarettes at all');">Not at all</label>
+    </div>
+
+
+
+    <div id="question-35" class="extraquestion">
+        <h3>How often do you have someone to take you to the doctor if you needed it?</h3>
+        <label><input type="radio" name="q35" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to take you to the doctor if you needed it?', 'Yes', 'None of the time', 'They have nobody to take them to the doctor if they needed it a little of the time');">None of the time</label>
+        <div></div>
+        <label><input type="radio" name="q35" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to take you to the doctor if you needed it?', 'Yes', 'A little of the time', 'They have somebody to take them to the doctor if they needed it a little of the time');">A little of the time</label>
+        <div></div>
+        <label><input type="radio" name="q35" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to take you to the doctor if you needed it?', 'No', 'Some of the time', 'They have somebody to take them to the doctor if they needed it some of the time');">Some of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q35" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to take you to the doctor if you needed it?', 'No', 'Most of the time', 'They have somebody to take them to the doctor if they needed it most of the time');">Most of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q35" value="No"
+                onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to take you to the doctor if you needed it?', 'No', 'All of the time', 'They have somebody to take them to the doctor if they needed it all of the time')">All of the
+            time</label>
+    </div>
+
+    <div id="question-36" class="extraquestion">
+        <h3>How often do you have someone to prepare your meals if you were unable to do it
+            yourself?</h3>
+        <label><input type="radio" name="q36" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(36, 'How often do you have someone to prepare your meals if you were unable to do it yourself?', 'Yes', 'None of the time', 'They have nobody to prepare their meals if they were unable to do it themselves');">None of the time</label>
+        <div></div>
+        <label><input type="radio" name="q36" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(36, 'How often do you have someone to prepare your meals if you were unable to do it yourself?', 'Yes', 'A little of the time', 'They have somebody to prepare their meals if they were unable to do it themselves a little of the time');">A little of the time</label>
+        <div></div>
+        <label><input type="radio" name="q36" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(36, 'How often do you have someone to prepare your meals if you were unable to do it yourself?', 'No', 'Some of the time', 'They have somebody to prepare their meals if they were unable to do it themselves some of the time');">Some of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q36" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(36, 'How often do you have someone to prepare your meals if you were unable to do it yourself?', 'No', 'Most of the time', 'They have somebody to prepare their meals if they were unable to do it themselves most of the time');">Most of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q36" value="No"
+                onclick="saveAnswerAndShowNextQuestion(36, 'How often do you have someone to prepare your meals if you were unable to do it yourself?', 'No', 'All of the time', 'They have somebody to prepare their meals if they were unable to do it themselves all of the time')">All of the
+            time</label>
+    </div>
+
+    <div id="question-38" class="extraquestion">
+        <h3>How often do you have someone to have a good time with?</h3>
+        <label><input type="radio" name="q38" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(38, 'How often do you have someone to have a good time with?', 'Yes', 'None of the time', 'They have nobody to have a good time with');">None of the time</label>
+        <div></div>
+        <label><input type="radio" name="q38" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(38, 'How often do you have someone to have a good time with?', 'Yes', 'A little of the time', 'They have somebody to have a good time with a little of the time');">A little of the time</label>
+        <div></div>
+        <label><input type="radio" name="q38" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(38, 'How often do you have someone to have a good time with?', 'No', 'Some of the time', 'They have somebody to have a good time with some of the time');">Some of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q38" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(38, 'How often do you have someone to have a good time with?', 'No', 'Most of the time', 'They have somebody to have a good time with most of the time');">Most of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q38" value="No"
+                onclick="saveAnswerAndShowNextQuestion(38, 'How often do you have someone to have a good time with?', 'No', 'All of the time', 'They have somebody to have a good time with all of the time')">All of the
+            time</label>
+    </div>
+
+    <div id="question-39" class="extraquestion">
+        <h3>How often do you have someone to turn to for suggestions about how to deal with a
+            personal problem?</h3>
+        <label><input type="radio" name="q39" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(39, 'How often do you have someone to turn to for suggestions about how to deal with a personal problem?', 'Yes', 'None of the time');">None of the time</label>
+        <div></div>
+        <label><input type="radio" name="q39" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(39, 'How often do you have someone to turn to for suggestions about how to deal with a personal problem?', 'Yes', 'A little of the time');">A little of the time</label>
+        <div></div>
+        <label><input type="radio" name="q39" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(39, 'How often do you have someone to turn to for suggestions about how to deal with a personal problem?', 'No', 'Some of the time');">Some of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q39" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(39, 'How often do you have someone to turn to for suggestions about how to deal with a personal problem?', 'No', 'Most of the time');">Most of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q39" value="No"
+                onclick="saveAnswerAndShowNextQuestion(39, 'How often do you have someone to turn to for suggestions about how to deal with a personal problem?', 'No', 'All of the time')">All of the
+            time</label>
+    </div>
+
+    <div id="question-40" class="extraquestion">
+        <h3>How often do you have someone who understands your problems?</h3>
+        <label><input type="radio" name="q40" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(40, 'How often do you have someone who understands your problems?', 'Yes', 'None of the time', 'They have nobody who understands their problems');">None of the time</label>
+        <div></div>
+        <label><input type="radio" name="q40" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(40, 'How often do you have someone who understands your problems?', 'Yes', 'A little of the time', 'They have somebody who understands their problems a little of the time');">A little of the time</label>
+        <div></div>
+        <label><input type="radio" name="q40" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(40, 'How often do you have someone who understands your problems?', 'No', 'Some of the time', 'They have somebody who understands their problems some of the time');">Some of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q40" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(40, 'How often do you have someone who understands your problems?', 'No', 'Most of the time', 'They have somebody who understands their problems most of the time');">Most of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q40" value="No"
+                onclick="saveAnswerAndShowNextQuestion(40, 'How often do you have someone who understands your problems?', 'No', 'All of the time', 'They have somebody who understands their problems all of the time')">All of the
+            time</label>
+    </div>
+
+    <div id="question-41" class="extraquestion">
+        <h3>How often do you have someone to love and make you feel wanted?</h3>
+        <label><input type="radio" name="q41" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(41, 'How often do you have someone to love and make you feel wanted?', 'Yes', 'None of the time', 'They have nobody to love and make them feel wanted');">None of the time</label>
+        <div></div>
+        <label><input type="radio" name="q41" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(41, 'How often do you have someone to love and make you feel wanted?', 'Yes', 'A little of the time', 'They have somebody to love and make them feel wanted a little of the time');">A little of the time</label>
+        <div></div>
+        <label><input type="radio" name="q41" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(41, 'How often do you have someone to love and make you feel wanted?', 'No', 'Some of the time', 'They have somebody to love and make them feel wanted some of the time');">Some of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q41" value="Yes"
+                onclick="saveAnswerAndShowNextQuestion(41, 'How often do you have someone to love and make you feel wanted?', 'No', 'Most of the time', 'They have somebody to love and make them feel wanted most of the time');">Most of the
+            time</label>
+        <div></div>
+        <label><input type="radio" name="q41" value="No"
+                onclick="saveAnswerAndShowNextQuestion(41, 'How often do you have someone to love and make you feel wanted?', 'No', 'All of the time', 'They have somebody to love and make them feel wanted all of the time')">All of the
+            time</label>
+    </div>
+
+    <button onclick="submitExtra()" id="submitStarters">Submit</button>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script>
+        // Function to retrieve answersArray from sessionStorage
+        document.addEventListener('DOMContentLoaded', function () {
+      var startersYesCount = sessionStorage.getItem('startersYesCount');
+      console.log('startersYesCount on page load:', startersYesCount);
+      // You can use startersYesCount as needed
+
+      // Initialize startersYesCount if not present
+      if (!startersYesCount) {
+        startersYesCount = 0;
+        sessionStorage.setItem('startersYesCount', startersYesCount);
+        console.log('Initialized startersYesCount:', startersYesCount);
+      }
+    });
+
+    // Function to retrieve answersArray from sessionStorage
+    function loadAnswersArray() {
+      var storedAnswersArray = sessionStorage.getItem('answersArray');
+
+      if (storedAnswersArray) {
+        // Parse the JSON string back to an array
+        answersArray = JSON.parse(storedAnswersArray);
+      } else {
+        // Handle the case where the array is not found
+        console.error('answersArray not found in sessionStorage.');
+      }
+    }
+
+    // Call this function when the Questions page loads
+    loadAnswersArray();
+
+    function loadYesAnswersArray() {
+    var storedYesAnswersArray = sessionStorage.getItem('yesAnswersArray');
+    console.log('fsfs',storedYesAnswersArray);
+    if (storedYesAnswersArray) {
+      // Parse the JSON string back to an array
+      console.log('got stored answers');
+      yesAnswersArray = JSON.parse(storedYesAnswersArray);
+    } else {
+      // Handle the case where the array is not found
+      console.log('could not find')
+      console.error('yesAnswersArray not found in sessionStorage.');
+    }
+  }
+console.log('does this work');
+  // Call this function when the Questions page loads
+  loadYesAnswersArray();
+
+  loadLoginInfo();
+    function loadLoginInfo() {
+  var selectedCaseworkerID = sessionStorage.getItem('selectedCaseworkerID');
+  var selectedCommunityID = sessionStorage.getItem('selectedCommunityID');
+  var UserID = sessionStorage.getItem('userUserID');
+
+  console.log('Selected Caseworker ID:', selectedCaseworkerID);
+  console.log('Selected Community ID:', selectedCommunityID);
+  console.log('UserID:', UserID);
+}
+    </script>
+</body>
+
+</html>

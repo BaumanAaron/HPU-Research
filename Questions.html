@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <title>Questionnaire</title>
+</head>
+
+<body>
+  <header>
+    <h1>Health Questionnaire - Additional Questions</h1>
+  </header>
+
+  <div id="question-1" class="question">
+    <h3>Has a family member ever been diagnosed with high blood pressure?</h3>
+    <label><input type="checkbox" name="q1" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?','Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with high blood pressure');">Paternal Grandparents</label>
+    <div></div>
+    <label><input type="checkbox" name="q1" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with high blood pressure');">Maternal Grandparents</label>
+    <div></div>
+    <label><input type="checkbox" name="q1" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?', 'Yes', 'Parents', 'A Parent(s) diagnosed with high blood pressure');">Parents</label>
+    <div></div>
+    <label><input type="checkbox" name="q1" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with high blood pressure');">Sibling</label>
+    <div></div>
+    <label><input type="checkbox" name="q1" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?', 'Yes', 'Spouse', 'Spouse diagnosed with high blood pressure');">Spouse</label>
+    <div></div>
+    <label><input type="checkbox" name="q1" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?', 'Yes', 'Touch Required', 'Child(ren) diagnosed with high blood pressure');">Children</label>
+    <div></div>
+    <label><input type="checkbox" name="q1" value="No" onclick="saveAnswerAndShowNextQuestion(1,'Has a family member ever been diagnosed with high blood pressure?', 'No', 'No', 'No family member diagnosed with high blood pressure')">No</label>
+</div>
+
+
+<div id="question-2" class="question">
+  <h3>Has a family member ever been diagnosed with diabetes?</h3>
+  <label><input type="checkbox" name="q2" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with diabetes');">Paternal Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q2" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with diabetes');">Maternal Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q2" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'Yes', 'Parents', 'A Parent(s) diagnosed with diabetes');">Parents</label>
+  <div></div>
+  <label><input type="checkbox" name="q2" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with diabetes');">Sibling</label>
+  <div></div>
+  <label><input type="checkbox" name="q2" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'Yes', 'Spouse', 'Spouse diagnosed with diabetes');">Spouse</label>
+  <div></div>
+  <label><input type="checkbox" name="q2" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'Yes', 'Children', 'Child(ren) diagnosed with diabetes');">Children</label>
+  <div></div>
+  <label><input type="checkbox" name="q2" value="No" onclick="saveAnswerAndShowNextQuestion(2,'Has a family member ever been diagnosed with diabetes?', 'No', 'No', 'No family member diagnosed with diabetes')">No</label>
+</div>
+
+<div id="question-13" class="question">
+  <h3>Has a family member ever been diagnosed with Alzheimer's or age-related dementia?</h3>
+  <label><input type="checkbox" name="q13" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with Alzheimers or age-related dementia');">Paternal
+      Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q13" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with Alzheimers or age-related dementia');">Maternal
+      Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q13" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'Yes', 'Parents', 'A Parent(s) diagnosed with Alzheimers or age-related dementia');">Parents</label>
+  <div></div>
+  <label><input type="checkbox" name="q13" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with Alzheimers or age-related dementia');">Sibling</label>
+  <div></div>
+  <label><input type="checkbox" name="q13" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'Yes', 'Spouse', 'Spouse diagnosed with Alzheimers or age-related dementia');">Spouse</label>
+  <div></div>
+  <label><input type="checkbox" name="q13" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'Yes', 'Children', 'Child(ren) diagnosed with Alzheimers or age-related dementia');">Children</label>
+  <div></div>
+  <label><input type="checkbox" name="q13" value="No" onclick="saveAnswerAndShowNextQuestion(13, 'Has a family member ever been diagnosed with Alzheimers or age-related dementia?', 'No', 'No', 'No family member diagnosed with Alzheimers or age-related dementia')">No</label>
+</div>
+
+<div id="question-17" class="question">
+  <h3>Has a family member ever been diagnosed with osteoarthritis?</h3>
+  <label><input type="checkbox" name="q17" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with osteoarthritis');">Paternal
+      Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q17" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with osteoarthritis');">Maternal
+      Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q17" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'Yes', 'Parents', 'A Parent(s) diagnosed with osteoarthritis');">Parents</label>
+  <div></div>
+  <label><input type="checkbox" name="q17" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with osteoarthritis');">Sibling</label>
+  <div></div>
+  <label><input type="checkbox" name="q17" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'Yes', 'Spouse', 'Spouse diagnosed with osteoarthritis');">Spouse</label>
+  <div></div>
+  <label><input type="checkbox" name="q17" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'Yes', 'Children', 'Child(ren) diagnosed with osteoarthritis');">Children</label>
+  <div></div>
+  <label><input type="checkbox" name="q17" value="No"
+      onclick="saveAnswerAndShowNextQuestion(17, 'Has a family member ever been diagnosed with osteoarthritis?', 'No', 'No', 'No family member diagnosed with osteoarthritis')">No</label>
+</div>
+
+<div id="question-3" class="question">
+  <h3>Has a family member ever been diagnosed with asthma?</h3>
+  <label><input type="checkbox" name="q3" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with asthma');">Paternal Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q3" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with asthma');">Maternal Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q3" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'Yes', 'Parents', 'A Parent(s) diagnosed with asthma');">Parents</label>
+  <div></div>
+  <label><input type="checkbox" name="q3" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with asthma');">Sibling</label>
+  <div></div>
+  <label><input type="checkbox" name="q3" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'Yes', 'Spouse', 'Spouse diagnosed with asthma');">Spouse</label>
+  <div></div>
+  <label><input type="checkbox" name="q3" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'Yes', 'Children', 'Child(ren) diagnosed with asthma');">Children</label>
+  <div></div>
+  <label><input type="checkbox" name="q3" value="No" onclick="saveAnswerAndShowNextQuestion(3,'Has a family member ever been diagnosed with asthma?', 'No', 'No', 'No family member diagnosed with asthma')">No</label>
+</div>
+
+<div id="question-4" class="question">
+  <h3>Has a family member ever been diagnosed with a stroke?</h3>
+  <label><input type="checkbox" name="q4" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with a stroke');">Paternal Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q4" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with a stroke');">Maternal Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q4" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'Yes', 'Parents', 'A Parent(s) diagnosed with a stroke');">Parents</label>
+  <div></div>
+  <label><input type="checkbox" name="q4" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with a stroke');">Sibling</label>
+  <div></div>
+  <label><input type="checkbox" name="q4" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'Yes', 'Spouse', 'Spouse diagnosed with a stroke');">Spouse</label>
+  <div></div>
+  <label><input type="checkbox" name="q4" value="Yes"
+      onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'Yes', 'Children', 'Child(ren) diagnosed with a stroke');">Children</label>
+  <div></div>
+  <label><input type="checkbox" name="q4" value="No" onclick="saveAnswerAndShowNextQuestion(4,'Has a family member ever been diagnosed with a stroke?', 'No', 'No', 'No family member diagnosed with a stroke')">No</label>
+</div>
+
+<div id="question-16" class="question">
+  <h3>Has a family member ever been diagnosed with high cholesterol?</h3>
+  <label><input type="checkbox" name="q16" value="Yes"
+          onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'Yes', 'Paternal Grandparents', 'A Paternal Grandparent(s) diagnosed with high cholesterol');">Paternal
+      Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q16" value="Yes"
+          onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'Yes', 'Maternal Grandparents', 'A Maternal Grandparent(s) diagnosed with high cholesterol');">Maternal
+      Grandparents</label>
+  <div></div>
+  <label><input type="checkbox" name="q16" value="Yes"
+          onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'Yes', 'Parents', 'A Parent(s) diagnosed with high cholesterol');">Parents</label>
+  <div></div>
+  <label><input type="checkbox" name="q16" value="Yes"
+          onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'Yes', 'Sibling', 'A Sibling(s) diagnosed with high cholesterol');">Sibling</label>
+  <div></div>
+  <label><input type="checkbox" name="q16" value="Yes"
+          onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'Yes', 'Spouse', 'Spouse diagnosed with high cholesterol');">Spouse</label>
+  <div></div>
+  <label><input type="checkbox" name="q16" value="Yes"
+          onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'Yes', 'Children', 'Child(ren) diagnosed with high cholesterol');">Children</label>
+  <div></div>
+  <label><input type="checkbox" name="q16" value="No" onclick="saveAnswerAndShowNextQuestion(16, 'Has a family member ever been diagnosed with high cholesterol?', 'No', 'No family member diagnosed with high cholesterol')">No</label>
+</div>
+
+
+  <div id="question-5" class="question">
+    <h3>How often do you have someone to help with daily chores, if you were to get sick?</h3>
+    <label><input type="radio" name="q5" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(5,'How often do you have someone to help with daily chores, if you were to get sick?', 'Yes', 'Touch Required', 'They have nobody to help with daily chores, if they were to get sick');">None of the time</label>
+    <div></div>
+    <label><input type="radio" name="q5" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(5,'How often do you have someone to help with daily chores, if you were to get sick?', 'Yes', 'Touch Required', 'They have somebody to help with daily chores, if they were to get sick a little of the time');">A little of the time</label>
+    <div></div>
+    <label><input type="radio" name="q5" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(5,'How often do you have someone to help with daily chores, if you were to get sick?', 'No', 'Some of the time', 'They have somebody to help with daily chores, if they were to get sick some of the time');">Some of the time</label>
+    <div></div>
+    <label><input type="radio" name="q5" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(5,'How often do you have someone to help with daily chores, if you were to get sick?', 'No', 'Most of the time', 'They have somebody to help with daily chores, if they were to get sick most of the time');">Most of the time</label>
+    <div></div>
+    <label><input type="radio" name="q5" value="No"
+        onclick="saveAnswerAndShowNextQuestion(5,'How often do you have someone to help with daily chores, if you were to get sick?', 'No', 'All of the time', 'They have somebody to help with daily chores, if they were to get sick all of the time')">All of the time</label>
+  </div>
+
+  <div id="question-35" class="question">
+    <h3>How often do you have someone to help you if you were confined to bed?</h3>
+    <label><input type="radio" name="q35" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to help you if you were confined to bed?', 'Yes', 'None of the time', 'They have nobody to help if they were confined to bed');">None of the time</label>
+    <div></div>
+    <label><input type="radio" name="q35" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to help you if you were confined to bed?', 'Yes', 'A little of the time', 'They have somebody to help if they were confined to bed a little of the time');">A little of the time</label>
+    <div></div>
+    <label><input type="radio" name="q35" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to help you if you were confined to bed?', 'No', 'Some of the time', 'They have somebody to help if they were confined to bed some of the time');">Some of the
+        time</label>
+    <div></div>
+    <label><input type="radio" name="q35" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to help you if you were confined to bed?', 'No', 'Most of the time', 'They have somebody to help if they were confined to bed most of the time');">Most of the
+        time</label>
+    <div></div>
+    <label><input type="radio" name="q35" value="No"
+            onclick="saveAnswerAndShowNextQuestion(35, 'How often do you have someone to help you if you were confined to bed?', 'No', 'All of the time', 'They have somebody to help if they were confined to bed all of the time')">All of the
+        time</label>
+</div>
+
+  <div id="question-6" class="question">
+    <h3>What is your annual household income?</h3>
+    <label><input type="radio" name="q6" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'Yes', 'Less than $5,000', 'Annual household income Less than $5,000');">Less than $5,000</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'Yes', '$5,000 to less than $15,000', 'Annual household income $5,000 to less than $15,000');">$5,000 to less than
+      $15,000</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'Yes', '$15,000 to less than $20,000', 'Annual household income $15,000 to less than $20,000');">$15,000 to less than
+      $20,000</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'Yes', '$25,000 to less than $35,000', 'Annual household income $25,000 to less than $35,000');">$25,000 to less than
+      $35,000</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'Yes', '$35,000 to less than $50,000', 'Annual household income $35,000 to less than $50,000');">$35,000 to less than
+      $50,000</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'No', '$50,000 to less than $75,000', 'Annual household income $50,000 to less than $75,000');">$50,000 to less than
+      $75,000</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="No"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'No', '$75,000 or more', 'Annual household income $75,000 or more');">$75,000 or more</label>
+    <div></div>
+    <label><input type="radio" name="q6" value="No"
+        onclick="saveAnswerAndShowNextQuestion(6,'What is your annual household income?', 'No', 'Dont know/Not sure', 'Not sure of annual household income');">Don't know/Not sure</label>
+    <div></div>
+  </div>
+
+
+
+  <div id="question-7" class="question">
+    <h3>Do you have children under the age of 18 in your household?</h3>
+    <label><input type="radio" name="q7" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(7,'Do you have children under the age of 18 in your household?', 'Yes', 'Yes', 'Children under the age of 18 in household');">Yes</label>
+    <div></div>
+    <label><input type="radio" name="q7" value="No" onclick="saveAnswerAndShowNextQuestion(7,'Do you have children under the age of 18 in your household?', 'No', 'No', 'No children under the age of 18 in household')">No</label>
+  </div>
+
+  <div id="question-20" class="question">
+    <h3>During a typical day, does your health limit you in moderate activities, such as moving a table, pushing a
+        vacuum cleaner, bowling, or playing golf?</h3>
+    <label><input type="radio" name="q20" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(20, 'During a typical day, does your health limit you in moderate activities, such as moving a table, pushing a vacuum cleaner, bowling, or playing golf?', 'Yes', 'Yes, limited a lot', 'Health limited a lot in moderate activities');">Yes, limited a lot</label>
+    <div></div>
+    <label><input type="radio" name="q20" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(20, 'During a typical day, does your health limit you in moderate activities, such as moving a table, pushing a vacuum cleaner, bowling, or playing golf?', 'Yes', 'Yes, limited a little', 'Health limited a little in moderate activities');">Yes, limited a
+        little</label>
+    <div></div>
+    <label><input type="radio" name="q20" value="No"
+            onclick="saveAnswerAndShowNextQuestion(20, 'During a typical day, does your health limit you in moderate activities, such as moving a table, pushing a vacuum cleaner, bowling, or playing golf?', 'No', 'No, not limited at all', 'Health not limited in moderate activities')">No, not
+        limited at all</label>
+</div>
+
+  <div id="question-8" class="question">
+    <h3>During a typical day, does your health limit you in climbing several
+      flights of stairs?</h3>
+    <label><input type="radio" name="q8" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(8, 'During a typical day, does your health limit you in climbing several flights of stairs?', 'Yes', 'Yes, limited a lot', 'Health limited a lot in climbing several flights of stairs');">Yes, limited a lot</label>
+    <div></div>
+    <label><input type="radio" name="q8" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(8, 'During a typical day, does your health limit you in climbing several flights of stairs?', 'Yes', 'Yes, limited a little', 'Health limited a lot in climbing several flights of stairs');">Yes, limited a little</label>
+    <div></div>
+    <label><input type="radio" name="q8" value="No"
+        onclick="saveAnswerAndShowNextQuestion(8, 'During a typical day, does your health limit you in climbing several flights of stairs?', 'No', 'No, not limited at all', 'Health not limited in climbing several flights of stairs')">No, not limited at all</label>
+  </div>
+
+  <div id="question-9" class="question">
+    <h3>During the past week, how often have you felt happy?</h3>
+    <label><input type="radio" name="q9" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(9, 'During the past week, how often have you felt happy?', 'Yes', 'Rarely (less than 1 day)', 'Over the past week Rarely (less than 1 day) felt happy');">Rarely (less than 1 day)</label>
+    <div></div>
+    <label><input type="radio" name="q9" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(9, 'During the past week, how often have you felt happy?', 'No', 'Some of the time (1-2 days)', 'Over the past week Some of the time (1-2 days) felt happy');">Some of the time (1-2
+      days)</label>
+    <div></div>
+    <label><input type="radio" name="q9" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(9, 'During the past week, how often have you felt happy?', 'No', 'Occasionally (3-4 days)', 'Over the past week Occasionally (3-4 days) felt happy');">Occasionally (3-4 days)</label>
+    <div></div>
+    <label><input type="radio" name="q9" value="No"
+        onclick="saveAnswerAndShowNextQuestion(9, 'During the past week, how often have you felt happy?', 'No', 'Most of the time (5-7 days)', 'Over the past week Most of the time (5-7 days) felt happy')">Most of the time (5-7
+      days)</label>
+  </div>
+
+  <div id="question-29" class="question">
+    <h3>During the past week, how often have you felt that you enjoyed life?</h3>
+    <label><input type="radio" name="q29" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(29,'During the past week, how often have you felt that you enjoyed life?', 'Yes', 'Rarely (less than 1 day)', 'Over the past week Rarely (less than 1 day) felt that they enjoyed life');">Rarely
+        (less than 1 day)</label>
+    <div></div>
+    <label><input type="radio" name="q29" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(29,'During the past week, how often have you felt that you enjoyed life?', 'No', 'Some of the time (1-2 days)', 'Some of the time', 'Over the past week Some of the time (1-2 days) felt that they enjoyed life');">Some
+        of the
+        time (1-2 days)</label>
+    <div></div>
+    <label><input type="radio" name="q29" value="Yes"
+            onclick="saveAnswerAndShowNextQuestion(29,'During the past week, how often have you felt that you enjoyed life?', 'No', 'Occasionally (3-4 days)', 'Over the past week Occasionally (3-4 days) felt that they enjoyed life');">Occasionally
+        (3-4 days)</label>
+    <div></div>
+    <label><input type="radio" name="q29" value="No"
+            onclick="saveAnswerAndShowNextQuestion(29,'During the past week, how often have you felt that you enjoyed life?', 'No', 'Most of the time (5-7 days)', 'Over the past week Most of the time (5-7 days) felt that they enjoyed life')">Most of the
+        time (5-7 days)</label>
+</div>
+
+  <div id="question-10" class="question">
+    <h3>Do you trust information about health or medical topics from a
+      traditional healer or practitioner?</h3>
+    <label><input type="radio" name="q10" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(10, 'Do you trust information about health or medical topics from a traditional healer or practitioner?', 'Yes', 'Not at all', 'Does not trust information about health or medical topics from a traditional healer or practitioner');">Not at all</label>
+    <div></div>
+    <label><input type="radio" name="q10" value="Yes" onclick="saveAnswerAndShowNextQuestion(10, 'Do you trust information about health or medical topics from a traditional healer or practitioner?', 'No', 'A little', 'Trusts information about health or medical topics from a traditional healer or practitioner a little');">A
+      little</label>
+    <div></div>
+    <label><input type="radio" name="q10" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(10, 'Do you trust information about health or medical topics from a traditional healer or practitioner?', 'No', 'Some', 'Trusts information about health or medical topics from a traditional healer or practitioner some');">Some</label>
+    <div></div>
+    <label><input type="radio" name="q10" value="No" onclick="saveAnswerAndShowNextQuestion(10, 'Do you trust information about health or medical topics from a traditional healer or practitioner?', 'No', 'A lot', 'Trusts information about health or medical topics from a traditional healer or practitioner a lot')">A
+      lot</label>
+  </div>
+
+
+
+
+
+  <button onclick="submitQuestions()" id="submitStarters">Submit</button>
+
+  <footer>
+    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+  </footer>
+
+  <script src="common.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var startersYesCount = sessionStorage.getItem('startersYesCount');
+      console.log('startersYesCount on page load:', startersYesCount);
+      // You can use startersYesCount as needed
+
+      // Initialize startersYesCount if not present
+      if (!startersYesCount) {
+        startersYesCount = 0;
+        sessionStorage.setItem('startersYesCount', startersYesCount);
+        console.log('Initialized startersYesCount:', startersYesCount);
+      }
+    });
+
+    // Function to retrieve answersArray from sessionStorage
+    function loadAnswersArray() {
+      var storedAnswersArray = sessionStorage.getItem('answersArray');
+
+      if (storedAnswersArray) {
+        // Parse the JSON string back to an array
+        answersArray = JSON.parse(storedAnswersArray);
+      } else {
+        // Handle the case where the array is not found
+        console.error('answersArray not found in sessionStorage.');
+      }
+    }
+
+    // Call this function when the Questions page loads
+    loadAnswersArray();
+
+    function loadYesAnswersArray() {
+    var storedYesAnswersArray = sessionStorage.getItem('yesAnswersArray');
+    console.log('fsfs',storedYesAnswersArray);
+    if (storedYesAnswersArray) {
+      // Parse the JSON string back to an array
+      yesAnswersArray = JSON.parse(storedYesAnswersArray);
+    } else {
+      // Handle the case where the array is not found
+      console.error('yesAnswersArray not found in sessionStorage.');
+    }
+  }
+
+  // Call this function when the Questions page loads
+  loadYesAnswersArray();
+
+
+  loadLoginInfo();
+    function loadLoginInfo() {
+  var selectedCaseworkerID = sessionStorage.getItem('selectedCaseworkerID');
+  var selectedCommunityID = sessionStorage.getItem('selectedCommunityID');
+  var UserID = sessionStorage.getItem('userUserID');
+
+  console.log('Selected Caseworker ID:', selectedCaseworkerID);
+  console.log('Selected Community ID:', selectedCommunityID);
+  console.log('UserID:', UserID);
+}
+  </script>
+</body>
+
+</html>

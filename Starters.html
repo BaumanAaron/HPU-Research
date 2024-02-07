@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <title>Questionnaire</title>
+</head>
+
+<body>
+  <header>
+    <h1>Health Questionnaire</h1>
+  </header>
+
+
+  <div id="question-100" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have high cholesterol?</h3>
+    <label><input type="radio" name="q100" value="Yes" onclick="saveAnswerAndShowNextQuestion(100, 'Have you ever been told by a doctor, nurse, or other health professionals that you have high cholesterol?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with high cholesterol within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q100" value="Yes" onclick="saveAnswerAndShowNextQuestion(100, 'Have you ever been told by a doctor, nurse, or other health professionals that you have high cholesterol?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with high cholesterol over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q100" value="No" onclick="saveAnswerAndShowNextQuestion(100, 'Have you ever been told by a doctor, nurse, or other health professionals that you have high cholesterol?', 'No', 'No', 'Not diagnosed with high cholesterol')">No</label>
+  </div>
+
+  <div id="question-101" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have prediabetes?</h3>
+    <label><input type="radio" name="q101" value="Yes" onclick="saveAnswerAndShowNextQuestion(101, 'Have you ever been told by a doctor, nurse, or other health professionals that you have prediabetes?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with prediabetes within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q101" value="Yes" onclick="saveAnswerAndShowNextQuestion(101, 'Have you ever been told by a doctor, nurse, or other health professionals that you have prediabetes?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with prediabetes over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q101" value="No" onclick="saveAnswerAndShowNextQuestion(101, 'Have you ever been told by a doctor, nurse, or other health professionals that you have prediabetes?', 'No', 'No', 'Not diagnosed with prediabetes')">No</label>
+  </div>
+
+  <!-- Question 102 -->
+  <div id="question-102" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have diabetes?</h3>
+    <label><input type="radio" name="q102" value="Yes" onclick="saveAnswerAndShowNextQuestion(102, 'Have you ever been told by a doctor, nurse, or other health professionals that you have diabetes?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with diabetes within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q102" value="Yes" onclick="saveAnswerAndShowNextQuestion(102, 'Have you ever been told by a doctor, nurse, or other health professionals that you have diabetes?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with diabetes over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q102" value="No" onclick="saveAnswerAndShowNextQuestion(102, 'Have you ever been told by a doctor, nurse, or other health professionals that you have diabetes?', 'No', 'No', 'Not diagnosed with diabetes')">No</label>
+  </div>
+
+  <!-- Question 103 -->
+  <div id="question-103" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have depression?</h3>
+    <label><input type="radio" name="q103" value="Yes" onclick="saveAnswerAndShowNextQuestion(103, 'Have you ever been told by a doctor, nurse, or other health professionals that you have depression?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with depression within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q103" value="Yes" onclick="saveAnswerAndShowNextQuestion(103, 'Have you ever been told by a doctor, nurse, or other health professionals that you have depression?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with depression over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q103" value="No" onclick="saveAnswerAndShowNextQuestion(103, 'Have you ever been told by a doctor, nurse, or other health professionals that you have depression?', 'No', 'No', 'Not diagnosed with depression')">No</label>
+  </div>
+
+  <div id="question-104" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have Post-Traumatic Stress
+      Disorder (PTSD)?</h3>
+    <label><input type="radio" name="q104" value="Yes" onclick="saveAnswerAndShowNextQuestion(104, 'Have you ever been told by a doctor, nurse, or other health professionals that you have Post-Traumatic Stress Disorder (PTSD)?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with PTSD within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q104" value="Yes" onclick="saveAnswerAndShowNextQuestion(104, 'Have you ever been told by a doctor, nurse, or other health professionals that you have Post-Traumatic Stress Disorder (PTSD)?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with PTSD over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q104" value="No" onclick="saveAnswerAndShowNextQuestion(104, 'Have you ever been told by a doctor, nurse, or other health professionals that you have Post-Traumatic Stress Disorder (PTSD)?', 'No', 'No', 'Not diagnosed with PTSD')">No</label>
+  </div>
+
+  <!-- Question 105 -->
+  <div id="question-105" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have high blood pressure?
+    </h3>
+    <label><input type="radio" name="q105" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(105, 'Have you ever been told by a doctor, nurse, or other health professionals that you have high blood pressure?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with high blood pressure within the last year')">Yes, currently
+      (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q105" value="Yes"
+        onclick="saveAnswerAndShowNextQuestion(105, 'Have you ever been told by a doctor, nurse, or other health professionals that you have high blood pressure?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with high blood pressure over a year ago')">Yes, previously (over a
+      year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q105" value="No"
+        onclick="saveAnswerAndShowNextQuestion(105, 'Have you ever been told by a doctor, nurse, or other health professionals that you have high blood pressure?', 'No', 'No', 'Not diagnosed with high blood pressure')">No</label>
+  </div>
+
+  <!-- Question 106 -->
+  <div id="question-106" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have osteoarthritis?</h3>
+    <label><input type="radio" name="q106" value="Yes" onclick="saveAnswerAndShowNextQuestion(106, 'Have you ever been told by a doctor, nurse, or other health professionals that you have osteoarthritis?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with osteoarthritis within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q106" value="Yes" onclick="saveAnswerAndShowNextQuestion(106, 'Have you ever been told by a doctor, nurse, or other health professionals that you have osteoarthritis?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with osteoarthritis over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q106" value="No" onclick="saveAnswerAndShowNextQuestion(106, 'Have you ever been told by a doctor, nurse, or other health professionals that you have osteoarthritis?', 'No', 'No', 'Not diagnosed with osteoarthritis')">No</label>
+  </div>
+
+  <!-- Question 107 -->
+  <div id="question-107" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have cancer of any kind?</h3>
+    <label><input type="radio" name="q107" value="Yes" onclick="saveAnswerAndShowNextQuestion(107, 'Have you ever been told by a doctor, nurse, or other health professionals that you have cancer of any kind?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with cancer within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q107" value="Yes" onclick="saveAnswerAndShowNextQuestion(107, 'Have you ever been told by a doctor, nurse, or other health professionals that you have cancer of any kind?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with cancer over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q107" value="No" onclick="saveAnswerAndShowNextQuestion(107, 'Have you ever been told by a doctor, nurse, or other health professionals that you have cancer of any kind?', 'No', 'No', 'Not diagnosed with cancer')">No</label>
+  </div>
+
+  <!-- Question 108 -->
+  <div id="question-108" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have asthma?</h3>
+    <label><input type="radio" name="q108" value="Yes" onclick="saveAnswerAndShowNextQuestion(108, 'Have you ever been told by a doctor, nurse, or other health professionals that you have asthma?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with asthma within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q108" value="Yes" onclick="saveAnswerAndShowNextQuestion(108, 'Have you ever been told by a doctor, nurse, or other health professionals that you have asthma?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with asthma over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q108" value="No" onclick="saveAnswerAndShowNextQuestion(108, 'Have you ever been told by a doctor, nurse, or other health professionals that you have asthma?', 'No', 'No', 'Not diagnosed with asthma')">No</label>
+  </div>
+
+  <!-- Question 109 -->
+  <div id="question-109" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have had a heart attack?</h3>
+    <label><input type="radio" name="q109" value="Yes" onclick="saveAnswerAndShowNextQuestion(109, 'Have you ever been told by a doctor, nurse, or other health professionals that you have had a heart attack?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with a heart attack within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q109" value="Yes" onclick="saveAnswerAndShowNextQuestion(109, 'Have you ever been told by a doctor, nurse, or other health professionals that you have had a heart attack?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with a heart attack over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q109" value="No" onclick="saveAnswerAndShowNextQuestion(109, 'Have you ever been told by a doctor, nurse, or other health professionals that you have had a heart attack?', 'No', 'No', 'Not diagnosed with a heart attack')">No</label>
+  </div>
+
+  <!-- Question 110 -->
+  <div id="question-110" class="Starters">
+    <h3>Have you ever been told by a doctor, nurse, or other health professionals that you have had a stroke?</h3>
+    <label><input type="radio" name="q110" value="Yes" onclick="saveAnswerAndShowNextQuestion(110, 'Have you ever been told by a doctor, nurse, or other health professionals that you have had a stroke?', 'Yes', 'Yes, currently (within the last year)', 'Diagnosed with a stroke within the last year')">Yes,
+      currently (within the last year)</label>
+    <div></div>
+    <label><input type="radio" name="q110" value="Yes" onclick="saveAnswerAndShowNextQuestion(110, 'Have you ever been told by a doctor, nurse, or other health professionals that you have had a stroke?', 'Yes', 'Yes, previously (over a year ago)', 'Diagnosed with a stroke over a year ago')">Yes,
+      previously (over a year ago)</label>
+    <div></div>
+    <label><input type="radio" name="q110" value="No" onclick="saveAnswerAndShowNextQuestion(110, 'Have you ever been told by a doctor, nurse, or other health professionals that you have had a stroke?', 'No', 'No', 'Not diagnosed with a stroke')">No</label>
+  </div>
+
+  <!-- Repeat the structure for other starter questions -->
+
+  <div id="submission-message">
+    <h2>Please click the submit button once you have answered all questions</h2>
+  </div>
+
+  <!-- Add this button at the end of the Starters page -->
+<button onclick="submitStarters()" id="submitStarters">Submit Starters</button>
+
+
+
+
+  <!-- Repeat the structure for other regular questions -->
+  <script src="common.js"></script>
+  <script>
+    loadLoginInfo();
+    function loadLoginInfo() {
+  var selectedCaseworkerID = sessionStorage.getItem('selectedCaseworkerID');
+  var selectedCommunityID = sessionStorage.getItem('selectedCommunityID');
+  var UserID = sessionStorage.getItem('userUserID');
+  var FirstName = sessionStorage.getItem('userFirstName');
+  var LastName = sessionStorage.getItem('userLastName');
+  var Birthdate = sessionStorage.getItem('userBirthdate');
+
+  console.log('Selected Caseworker ID:', selectedCaseworkerID);
+  console.log('Selected Community ID:', selectedCommunityID);
+  console.log('UserID:', UserID);
+  console.log('First Name:', FirstName);
+  console.log('Last Name:', LastName);
+  console.log('Birthdate:', Birthdate);
+}
+  </script>
+  <footer>
+    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

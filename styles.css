@@ -1,0 +1,161 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: beige;
+  background-position: calc(100% - 100px) center; /* Image positioned with a margin of 50px on the right */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Ensure the background image stays fixed while scrolling */
+  background-image: url('Papakolea.png'); /* URL of your image */
+  background-size: 600px; /* Fixed size for the background image */
+  height: 100%;
+  position: relative;
+}
+
+
+/* Styling for the questions */
+.question, .Starters, .extraquestion, .sure, .Registration, .userDetails, .h2 {
+  background: rgba(255, 255, 255, 0.9);
+  background-size: cover;
+  padding: 30px; /* Increase the padding to add space inside the element */
+  border-radius: 0px; /* Adjust the border-radius as needed */
+  box-shadow: 0 2px 5px rgba(240, 21, 21, 0);
+  margin: 0 auto;
+  margin-bottom: 0px;
+  max-width: 600px;
+
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust spacing between groups */
+}
+
+.form-group label {
+  width: 150px; /* Adjust label width as needed */
+  margin-right: 10px; /* Adjust spacing between label and input/select */
+}
+
+.form-group select,
+.form-group input {
+  flex: 1;
+}
+
+
+.question h2 {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.question button, .Starters button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.question button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Styling for the submission message */
+#submission-message {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+#submission-message h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling for the submit button */
+#submitStarters {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#submitRegistration{
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#submit-button:hover {
+  background-color: #218838;
+}
+
+
+
+h1 {
+  text-align: center;
+}
+
+
+#date-time {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  font-size: 24px; /* Increase the font size to make it bigger */
+  color: white; /* Set the font color to white */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333; /* Change the background color to your preference */
+  color: white; /* Change the text color to your preference */
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #333; /* Change the background color to your preference */
+  color: white; /* Change the text color to your preference */
+  padding: 5px 0; /* Increase the top and bottom padding to make the header taller */
+}
+
+header h1 {
+  font-size: 36px; /* Increase the font size to make the header text larger */
+  margin: 0; /* Remove any default margin to ensure proper alignment */
+}
