@@ -12,6 +12,7 @@ from sklearn import tree
 
 
 data = pd.read_csv("C:/Users/abaum/Documents/HPU/Research Data/ModifiedDatasheet.csv", na_values="199")
+#data = pd.read_csv("./ModifiedDatasheet.csv", na_values="199")
 
 
 All = ['b_childlive'	,'b_income'	,'b_employ7'	,'b_employ10','b_peoplelive','b_trustdoctor','b_trusttrad','b_activitiesmoving'	
@@ -47,6 +48,6 @@ accuracy = accuracy_score(y_test, y_pred)
 print('Decision Tree Accuracy: ', accuracy)
 
 import graphviz
-dot = tree.export_graphviz(decision_tree, out_file='BinaryB.dot', feature_names=features, class_names='need_touch',
+dot = tree.export_graphviz(decision_tree, out_file='BinaryB.dot', feature_names=features, class_names=['0','1'],
                             filled=True)
 graph = graphviz.Source(dot)

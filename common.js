@@ -54,7 +54,8 @@ function submitQuestions() {
     console.log('Question:', question);
     console.log('GroupName:', groupName);
     console.log('IsChecked:', isChecked);
-    console.log(isChecked.value);
+// Next line commented due to it throwing null ptr exception
+//    console.log(isChecked.value);
     if (!isChecked) {
       unansweredQuestions++;
     } else {
